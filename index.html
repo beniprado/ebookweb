@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="automobile_1f697.png" type="image/x-icon">
+    <title>LandPage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to right, #1b4c5c, #2b5a3d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .txt-leads {
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .txt-leads h1 {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+
+        .txt-leads p {
+            font-size: 18px;
+            color: rgb(231, 231, 231);
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.349);
+            border-radius: 20px;
+            padding: 40px;
+            margin-left: 40px;
+        }
+
+        form h2 {
+            text-align: center;
+            font-size: 17px;
+            color: aliceblue;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+        }
+
+        .input-box label {
+            display: block;
+            color: aliceblue;
+            margin-bottom: 5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .btn-enviar {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-enviar input {
+            width: 135px;
+            height: 50px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(113, 156, 99);
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="Container">
+            <div class="felx">
+                <div class="txt-leads">
+                    <h1>
+                        Aprenda<br>
+                        <span>Sobre Carros</span>
+                    </h1>
+                    <img src="Porsche-Free-Download-PNG.png" alt="Porsche">
+                    <p>Baixe agora o seu e-book sobre carros. <br> <span>Não perca essa oportunidade</span></p>
+                </div>
+                <div class="form-leads">
+                    <form action="https://gmail.us18.list-manage.com/subscribe/post?u=2cae6a10df9bed78ecbaf4f3b&amp;id=7ca8e0271e&amp;f_id=0069b5e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+                        <h2>INSIRA SEUS DADOS <br> E RECEBA O E-BOOK NO SEU EMAIL</h2>
+                        <div class="input-box">
+                            <label for="nome">Seu nome completo*</label>
+                            <input type="text" name="FNAME" id="nome" maxlength="20" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Seu e-mail*</label>
+                            <input type="email" name="EMAIL" id="email" title="Por favor, insira um e-mail válido" required>
+                            <span class="error-message" id="email-error">Coloque um email válido</span>
+                        </div>
+                        <div class="input-box">
+                            <label for="telefone">Seu telefone</label>
+                            <input type="tel" name="PHONE" id="telefone" pattern="[0-9]{1,11}" title="Por favor, insira apenas números, máximo de 11 caracteres" required>
+                            <span class="error-message" id="phone-error">Coloque um número válido</span>
+                        </div>
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                            <!-- / real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                            <input type="text" name="b_2cae6a10df9bed78ecbaf4f3b_7ca8e0271e" tabindex="-1" value="">
+                        </div>
+                        <div class="btn-enviar">
+                            <input type="submit" value="ENVIAR" onclick="return validateForm()">
+                            <!-- Link removido -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            var emailField = document.getElementById("email");
+            var phoneField = document.getElementById("telefone");
+            var emailErrorMessage = document.getElementById("email-error");
+            var phoneErrorMessage = document.getElementById("phone-error");
+
+            var emailValid = emailField.checkValidity();
+            var phoneValid = phoneField.checkValidity();
+
+            if (!emailValid) {
+                emailErrorMessage.style.display = "block";
+            } else {
+                emailErrorMessage.style.display = "none";
+            }
+
+            if (!phoneValid) {
+                phoneErrorMessage.style.display = "block";
+            } else {
+                phoneErrorMessage.style.display = "none";
+            }
+
+            return emailValid && phoneValid;
+        }
+    </script>
+</body>
+</html>
